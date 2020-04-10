@@ -7,6 +7,17 @@ users = [
     { username: "Wendy", password: "pw5" }
 ]
 
+# Auth method to verify user / password
+
+def auth_user(username, password, list_users)
+    list_users.each do |user_record|
+        if user_record[:username] == username && user_record[:password]
+            return user_record
+        end
+    end
+    "Username and password do not match"
+end
+
 # execution workflow
 
 puts "Welcome to MessageMe"

@@ -11,3 +11,11 @@ dial_book = {
   "lancaster" => "717"
 }
 
+def get_city_names(dial_book)
+    dial_book.keys
+end 
+
+def get_area_code(dial_book, key)
+    dial_book[key]
+end
+
